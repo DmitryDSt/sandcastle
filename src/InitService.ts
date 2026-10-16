@@ -437,7 +437,7 @@ ANTHROPIC_API_KEY=`,
     factoryImport: "codex",
     dockerfileTemplate: CODEX_DOCKERFILE,
     envExample: `# OpenAI API key
-OPENAI_KEY=`,
+OPENAI_API_KEY=`,
     setupCommand: `codex "$(cat ${SETUP_ISSUE_TRACKER_PATH})"`,
   },
   {
