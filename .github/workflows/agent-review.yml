@@ -1,7 +1,12 @@
 name: Agent Review
 
 on:
-  pull_request_target:
+  # pull_request, not pull_request_target: on a fork PR this gets no secrets
+  # and a read-only token, so checking out and running the PR's code is safe.
+  # Same-repo PRs (the ones the agent opens) keep secrets as before.
+  # pull_request does not fire on PRs with merge conflicts (GitHub can't build
+  # the merge ref) — resolving those is agent-update-branch's job.
+  pull_request:
     types: [labeled]
 
 jobs:
