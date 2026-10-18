@@ -67,18 +67,18 @@ describe("InitService scaffold", () => {
     {
       agent: claudeCodeAgent,
       expectedKey: "CLAUDE_CODE_OAUTH_TOKEN=",
-      unexpectedKey: "OPENAI_KEY=",
+      unexpectedKey: "CODEX_API_KEY=",
       expectClaudeSetupTokenHint: true,
     },
     {
       agent: piAgent,
       expectedKey: "ANTHROPIC_API_KEY=",
-      unexpectedKey: "OPENAI_KEY=",
+      unexpectedKey: "CODEX_API_KEY=",
       expectClaudeSetupTokenHint: false,
     },
     {
       agent: codexAgent,
-      expectedKey: "OPENAI_KEY=",
+      expectedKey: "CODEX_API_KEY=",
       unexpectedKey: "ANTHROPIC_API_KEY=",
       expectClaudeSetupTokenHint: false,
     },
